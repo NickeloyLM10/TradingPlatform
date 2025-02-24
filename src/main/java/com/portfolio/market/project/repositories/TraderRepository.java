@@ -1,4 +1,10 @@
 package com.portfolio.market.project.repositories;
 
-public interface TraderRepository {
+import com.portfolio.market.project.entities.Trader;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface TraderRepository extends JpaRepository<Trader,Long> {
+    Optional<Trader> findByEmail(String email);
 }

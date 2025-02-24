@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 public class Trade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "tradeId", nullable = false)
     private Long tradeId;
 
     @ManyToOne
@@ -47,5 +47,6 @@ public class Trade {
 
     @Column(nullable = false)
     private LocalDateTime tradeTime;
+
 
 }
