@@ -1,5 +1,6 @@
 package com.portfolio.market.project.entities;
 
+import com.portfolio.market.project.enums.TradeStatus;
 import com.portfolio.market.project.enums.TradeType;
 import jakarta.persistence.*;
 import lombok.*;
@@ -39,6 +40,10 @@ public class Trade {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TradeType tradeType;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TradeStatus tradeStatus;
 
     @Column(nullable = false)
     private LocalDateTime tradeTime;
